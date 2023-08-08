@@ -12,6 +12,8 @@ class AppModule extends Module {
   @override
   void binds(i) {
     i.addSingleton(TestReducer.new);
+    //na versão anterior tinha:
+    //Bind.factory((i) => CustomHasuraConnect.getConnect()),
     i.add(CustomHasuraConnect.new);
     i.add(TestRepository.new);
   }
